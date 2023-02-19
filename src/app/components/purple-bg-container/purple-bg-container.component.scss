@@ -1,0 +1,14 @@
+.purpleBg {
+  background-color: var(--colour-dark-violet);
+  background-image: url("/assets/background/bg-boost-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 1050px) {
+    background-image: url("/assets/background/bg-boost-desktop.svg");
+  }
+
+  &.borderRadius {
+    border-radius: 8px;
+  }
+}

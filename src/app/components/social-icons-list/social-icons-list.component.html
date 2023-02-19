@@ -1,0 +1,9 @@
+<ul class="socialLinks">
+  <li *ngFor="let social of socialLinks">
+    <a [href]="social.url" [attr.aria-label]="'link to ' + social.name">
+      <svg>
+        <use attr.xlink:href="/assets/icons/icons.svg#{{ social.icon }}"></use>
+      </svg>
+    </a>
+  </li>
+</ul>

@@ -1,5 +1,23 @@
 <nav>
-  <div class="logo">
-    <span>Shortly</span>
+  <div class="container">
+    <div class="inner">
+      <div class="left">
+        <div class="logo">
+          <span>Shortly</span>
+        </div>
+        <ul class="navlinks">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </div>
+
+      <ul class="authBtns">
+        <li><a href="#">Login</a></li>
+        <app-round-button [label]="'Sign up'"></app-round-button>
+      </ul>
+
+      <app-mobile-nav></app-mobile-nav>
+    </div>
   </div>
 </nav>

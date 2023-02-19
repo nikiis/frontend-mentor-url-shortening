@@ -1,0 +1,13 @@
+.recentLinks {
+  background-color: var(--colour-light-gray);
+  padding-top: 40px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li + li {
+      margin-top: 20px;
+    }
+  }
+}

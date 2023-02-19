@@ -1,0 +1,10 @@
+<ul class="footerColumn" *ngIf="footerColumn">
+  <li class="featureLink">
+    <a [href]="footerColumn.featureLink.url">{{
+      footerColumn.featureLink.name
+    }}</a>
+  </li>
+  <li class="subLink" *ngFor="let link of footerColumn.subLinks">
+    <a [href]="link.url">{{ link.name }}</a>
+  </li>
+</ul>

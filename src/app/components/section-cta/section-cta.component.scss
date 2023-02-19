@@ -1,0 +1,18 @@
+.cta {
+  padding: 0;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    color: var(--colour-white);
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 3.8rem;
+    }
+  }
+}
+
+:host ::ng-deep app-purple-bg-container .purpleBg {
+  padding: 50px 0;
+}

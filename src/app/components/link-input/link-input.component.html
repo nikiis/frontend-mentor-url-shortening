@@ -1,0 +1,30 @@
+<section class="linkInput">
+  <div class="container">
+    <app-purple-bg-container [addBorderRadius]="true">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+        <div class="input">
+          <label class="srOnly" for="linkInput">Enter Link</label>
+          <input
+            ngModel
+            [class]="isEmpty || !isUrlValid ? 'error' : ''"
+            name="linkInput"
+            #linkInput="ngModel"
+            id="linkInput"
+            type="text"
+            placeholder="Shorten a link here..."
+            required
+          />
+
+          <div class="errorMsgs" *ngIf="isEmpty || !isUrlValid">
+            <span *ngIf="isEmpty">Please add a link</span>
+            <span *ngIf="!isUrlValid">Please enter a valid link</span>
+          </div>
+        </div>
+
+        <div class="btn">
+          <app-primary-button [label]="'Shorten it!'"></app-primary-button>
+        </div>
+      </form>
+    </app-purple-bg-container>
+  </div>
+</section>

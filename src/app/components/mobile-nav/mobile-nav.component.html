@@ -1,0 +1,37 @@
+<div class="mobileNavContainer">
+  <button
+    id="mobileMenuBtn"
+    class="mobileMenuBtn"
+    aria-label="toggle mobile menu"
+    aria-controls="mobileMenuNav"
+    (click)="openMobileMenu()"
+    #mobileMenuBtn
+  >
+    <span class="topLine"></span>
+    <span class="bottomLine"></span>
+  </button>
+
+  <div
+    #mobileMenuNav
+    id="mobileMenuNav"
+    class="mobileMenu"
+    aria-labelledby="mobileMenuBtn"
+    [attr.aria-expanded]="isMobileMenuOpen"
+  >
+    <ul class="links">
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+
+    <ul class="authLinks">
+      <li><a href="#">Login</a></li>
+      <li>
+        <app-round-button
+          [label]="'Sign up'"
+          [width]="'100%'"
+        ></app-round-button>
+      </li>
+    </ul>
+  </div>
+</div>

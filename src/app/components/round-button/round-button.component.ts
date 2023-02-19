@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class RoundButtonComponent {
   @Input() label = '';
+  @Input() width = '';
   @Output() onClick: EventEmitter<Event> = new EventEmitter();
 
   onButtonClick(value: Event) {

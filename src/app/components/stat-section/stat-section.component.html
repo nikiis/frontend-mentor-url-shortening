@@ -1,0 +1,14 @@
+<section class="stats">
+  <div class="container">
+    <h2>Advanced Statistics</h2>
+    <p>
+      Track how your links are performing across the web with our advanced
+      statistics dashboard.
+    </p>
+    <ul>
+      <li *ngFor="let stat of statDetails">
+        <app-stat-card [details]="stat"></app-stat-card>
+      </li>
+    </ul>
+  </div>
+</section>

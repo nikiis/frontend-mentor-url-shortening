@@ -8,4 +8,18 @@ import { Component, Input } from '@angular/core';
 export class LinkCardComponent {
   @Input() longLink = '';
   @Input() shortLink = '';
+
+  buttonLabel = 'Copy';
+  isBtnDisabled = false;
+
+  copyText = () => {
+    navigator.clipboard.writeText(this.shortLink);
+    this.buttonLabel = 'Copied';
+    this.isBtnDisabled = true;
+
+    setTimeout(() => {
+      this.buttonLabel = 'Copy';
+      this.isBtnDisabled = false;
+    }, 2000);
+  };
 }

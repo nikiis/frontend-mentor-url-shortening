@@ -1,4 +1,20 @@
 <app-navbar></app-navbar>
-<app-round-button [label]="'Sign up'" (onClick)="test()"></app-round-button>
-<app-primary-button [label]="'Sign up'" (onClick)="test()"></app-primary-button>
+<app-hero-section></app-hero-section>
+<app-link-input (getLink)="addLinkData($event)"></app-link-input>
+<section class="recentLinks">
+  <div class="container">
+    <ul>
+      <li *ngFor="let link of recentLinks">
+        <app-link-card
+          [longLink]="link.longLink"
+          [shortLink]="link.shortLink"
+        ></app-link-card>
+      </li>
+    </ul>
+  </div>
+</section>
+<app-stat-section></app-stat-section>
+<app-section-cta></app-section-cta>
+<app-footer></app-footer>
+
 <router-outlet></router-outlet>

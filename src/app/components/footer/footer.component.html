@@ -1,0 +1,21 @@
+<footer>
+  <div class="container">
+    <div class="inner">
+      <div class="logo"><span>Shortly</span></div>
+      <div class="links">
+        <div class="columnLinks">
+          <app-footer-column
+            *ngFor="let column of footerColumns"
+            [footerColumn]="column"
+          ></app-footer-column>
+        </div>
+
+        <div class="socialLinks">
+          <app-social-icons-list
+            [socialLinks]="socialLinks"
+          ></app-social-icons-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

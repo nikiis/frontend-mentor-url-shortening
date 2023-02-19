@@ -1,0 +1,50 @@
+.linkCard,
+.result {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.linkCard {
+  background-color: var(--colour-white);
+  padding: 15px 20px;
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .longLink {
+    color: var(--colour-very-dark-violet);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+  }
+
+  .result {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid var(--colour-gray);
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+      gap: 10px;
+    }
+
+    span {
+      color: var(--colour-cyan);
+    }
+  }
+}
+
+:host ::ng-deep app-primary-button button {
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
+}

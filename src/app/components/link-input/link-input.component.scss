@@ -1,0 +1,63 @@
+.linkInput {
+  background: linear-gradient(
+    to top,
+    var(--colour-light-gray) 50%,
+    var(--colour-white) 50%
+  );
+  padding-bottom: 0;
+
+  form {
+    padding: 30px;
+
+    @media screen and (min-width: 768px) {
+      padding: 40px;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  }
+
+  .input {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      width: unset;
+      flex-basis: 85%;
+    }
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid var(--colour-grayish-violet);
+    padding: 12px 20px;
+    border-radius: 5px;
+
+    @media screen and (min-width: 768px) {
+      padding: 15px 20px;
+      flex-basis: 85%;
+    }
+
+    &.error {
+      border: 2px solid var(--colour-red);
+    }
+  }
+
+  .btn {
+    flex-basis: 15%;
+  }
+
+  .errorMsgs {
+    margin-top: 5px;
+
+    span {
+      font-style: italic;
+      color: var(--colour-red);
+    }
+  }
+}
+
+:host ::ng-deep app-primary-button button {
+  padding: 15px 20px;
+}
